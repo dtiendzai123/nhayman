@@ -64,7 +64,7 @@ class Vector3 {
 // === TouchDragAim CLASS BẮT ĐẦU ===
 class TouchDragAim {
   constructor(config = {}) {
-    this.touchSensitivity = config.sensitivity || 5.0;
+    this.touchSensitivity = config.sensitivity || 10.0;
     this.minThreshold = config.minThreshold || 0.001;
     this.maxThreshold = config.maxThreshold || 100.0;
 
