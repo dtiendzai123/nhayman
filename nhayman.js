@@ -413,7 +413,10 @@ function updateFrame() {
     return new TouchDragAim(config);
   }
 }
-
+const GamePackages = {
+  GamePackage1: "com.dts.freefireth",
+  GamePackage2: "com.dts.freefiremax"
+};
 // Export for Node.js or module system
 if (typeof module !== 'undefined') {
   module.exports = { TouchDragAim, Vector3 };
