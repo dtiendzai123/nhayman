@@ -394,7 +394,7 @@ this.aimPosition = new Vector3(0, 0, 0);
       }
     };
 
-const aimSystem = new TouchDragAim({ sensitivity: 5.0 });
+const aimSystem = new TouchDragAim({ sensitivity: 20.0 });
 
 // Mỗi khung hình (frame)
 function updateFrame() {
