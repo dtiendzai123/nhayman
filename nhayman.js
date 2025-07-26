@@ -73,7 +73,7 @@ class Vector3 {
 class TouchDragAim {
   constructor(config = {}) {
     // === CÀI ĐẶT ĐỘ NHẠY SIÊU CAO ===
-    this.touchSensitivity = config.sensitivity || 25.0;
+    this.touchSensitivity = config.sensitivity || 0.0001;
     this.ultraSensitivityMode = config.ultraSensitive || true;
     this.instantResponseTime = config.instantResponse || 0.001;
 
@@ -91,8 +91,8 @@ class TouchDragAim {
     };
 
     // === DRAG SENSITIVITY ENHANCEMENT ===
-    this.dragMultiplier = config.dragMultiplier || 5.0;
-    this.microMovementSensitivity = config.microSensitivity || 15.0;
+    this.dragMultiplier = config.dragMultiplier || 0.0001;
+    this.microMovementSensitivity = config.microSensitivity || 0.0001;
     this.accelerationCurve = config.acceleration || 2.0;
     this.deadZone = config.deadZone || 0.000001;
 
@@ -509,16 +509,16 @@ class TouchDragAim {
   createUltraPreset(name = 'ULTRA_PRESET') {
     return {
       name,
-      dragMultiplier: 5.0,
-      touchSensitivity: 5.0,
-      microMovementSensitivity: 2.0,
+      dragMultiplier: 0.0001,
+      touchSensitivity: 0.0001,
+      microMovementSensitivity: 0.0001,
       accelerationCurve: 1.2,
       smoothingFactor: 0.05,
       boneHeadTracking: {
         enabled: true,
         lockDistance: 999.0,
         predictionTime: 0.06,
-        lockStrength: 0.98,
+        lockStrength: 5.0,
         instantLock: true,
       },
       fireOnLock: true,
